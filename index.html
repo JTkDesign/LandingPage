@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JoyaTex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+
+    header {
+      width: 100%;
+      padding: 24px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+
+    .hero {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 120px 60px 60px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-left {
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .hero-left h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-left p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #333;
+    }
+
+   
+    .hero-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-right::before {
+      content: "";
+      position: absolute;
+      left: -80px;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      background: linear-gradient(to right, #ffffff, rgba(255,255,255,0));
+      z-index: 1;
+    }
+
+    .hero-right img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+      z-index: 0;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        padding: 20px;
+        position: static;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .hero-left h1 {
+        font-size: 38px;
+      }
+
+      .hero-right::before {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <!-- Replace with your logo -->
+        <img src="./assets/images/logo.png" style="width: 150px; height: auto;" alt="JoyaTex Logo">
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero">
+
+    <div class="hero-left">
+      <h1>Calidad, Precio<br>y Servicio</h1>
+
+      <p>
+        Fabricación, venta y reparación de joyería con garantía y experiencia.
+      </p>
+
+      <a href="https://www.facebook.com/profile.php?id=61589351096648" target="_blank" class="btn btn-primary">Encuéntranos</a>
+    </div>
+
+    <div class="hero-right">
+      <img src="assets/images/landingImage.png" alt="Joyería">
+    </div>
+
+  </section>
+
+</body>
+</html>
